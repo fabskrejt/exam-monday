@@ -1,0 +1,17 @@
+.section {
+    background-color: aquamarine;
+    border-radius: 10px;
+    color: black;
+}
+.red {
+    color: red;
+    text-align: center;
+    padding: 5px;
+    font-size: 120px;
+}
+
+.default {
+    text-align: center;
+    padding: 5px;
+    font-size: 120px;
+}

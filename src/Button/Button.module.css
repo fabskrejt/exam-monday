@@ -1,0 +1,17 @@
+.button{
+    display: inline-block;
+    padding: 5px;
+
+}
+
+.button button{
+    border-radius: 10px;
+    min-width: 90px;
+    min-height: 30px;
+    font-size: 30px;
+    background: aquamarine;
+}
+
+.button button:hover{
+    background: white;
+}

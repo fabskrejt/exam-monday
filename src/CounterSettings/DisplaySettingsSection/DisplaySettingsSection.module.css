@@ -21,7 +21,7 @@ input{
     outline: none;
 }
 .default input{
-    padding-left: 20px;
+    padding-left: 10px;
 }
 .red input{
     margin-left: 20px;

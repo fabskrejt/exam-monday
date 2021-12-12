@@ -3,23 +3,45 @@ import './CounterSettings.css';
 import {ButtonSettingsSection} from "./ButtonSettingsSection/ButtonSettingsSection";
 import {DisplaySettingsSection} from "./DisplaySettingsSection/DisplaySettingsSection";
 
-export function CounterSettings() {
+type CounterSettingsPropsType = {
+    onChangeMaxValue: (settingsValue: number) => void
+    onChangeStartValue: (changeStartValue: number) => void
+}
 
-    const [value, setValue] = useState(0)
-    const increment = () => {
-        setValue(value + 1)
+export function CounterSettings(props: CounterSettingsPropsType) {
+    const [startValue, setStartValue] = useState(0)
+    const [maxValue, setMaxValue] = useState(1)
+/*
+    let maxValue: number = 1;
+    let startValue: number = 0;
+*/
+    const onChangeStartValue= (value:number)=>{
+        setStartValue(value)
+        console.log(value)
     }
-    const reset = () => {
-        setValue(0)
+    const onChangeMaxValue= (value:number)=>{
+        setMaxValue(value)
+        console.log(value)
+    }
+
+    const setSettings = () => {
+        props.onChangeMaxValue(maxValue)
+        props.onChangeStartValue(startValue)
+        //setValue(0)
     }
     return (
         <div className="App">
             <div className='componentContainer'>
                 <div>
-                    <DisplaySettingsSection value={4}/>
+                    <DisplaySettingsSection
+                        onChangeStartValue={onChangeStartValue}
+                        startValue={startValue}
+                        maxValue={maxValue}
+                        onChangeMaxValue={onChangeMaxValue}
+                    />
                 </div>
                 <div>
-                    <ButtonSettingsSection increment={increment} reset={reset} value={value}/>
+                    <ButtonSettingsSection setSettings={setSettings} reset={() => ('')}/>
                 </div>
 
             </div>

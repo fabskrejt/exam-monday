@@ -3,18 +3,17 @@ import s from './ButtonSettingsSection.module.css'
 import {Button} from "../../Button/Button";
 
 export type ButtonSectionPropsType = {
-    increment: () => void
+    setSettings: () => void
     reset: () => void
-    value: number
 }
 
 export const ButtonSettingsSection = (props: ButtonSectionPropsType) => {
-    const increment = () => props.increment()
+    const setSettings = () => props.setSettings()
     const reset = () => props.reset()
 
     return (
         <div className={s.section}>
-            <Button onClick={increment} disabled={props.value === 5} title={'set'}/>
+            <Button onClick={setSettings} disabled={false} title={'set'}/>
         </div>
     )
 }

@@ -13,13 +13,6 @@ type CounterPropsType = {
 
 export function Counter(props: CounterPropsType) {
 
-    /*    const [value, setValue] = useState(0)
-        const increment = () => {
-            setValue(value + 1)
-        }
-        const reset = () => {
-            setValue(0)
-        }*/
     return (
         <div className="App">
             <div className='componentContainer'>

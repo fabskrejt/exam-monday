@@ -26,8 +26,6 @@ export const DisplaySettingsSection = (props: DisplaySectionProps) => {
                     value={props.startValue}
                     onChange={(e) => props.onChangeStartValue(+e.currentTarget.value)}/>
                 </div>
-
-                {/*    <span>{props.value}</span>*/}
             </div>
         </div>
 

@@ -4,6 +4,7 @@
     color: black;
     height: 155px;
 }
+
 .red {
     text-align: center;
     padding: 5px;
@@ -12,19 +13,18 @@
 
 .default {
     text-align: center;
-    padding: 5px;
+    padding-top: 30px;
     font-size: 20px;
 }
-input{
+
+input {
     width: 80px;
     border-radius: 10px;
     outline: none;
     padding-left: 10px;
     text-align: center;
 }
-.default input{
 
-}
-.red input{
+.red input {
     background-color: deeppink;
 }

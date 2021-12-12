@@ -9,17 +9,15 @@ type CounterSettingsPropsType = {
 }
 
 export function CounterSettings(props: CounterSettingsPropsType) {
+
     const [startValue, setStartValue] = useState(0)
     const [maxValue, setMaxValue] = useState(1)
-/*
-    let maxValue: number = 1;
-    let startValue: number = 0;
-*/
-    const onChangeStartValue= (value:number)=>{
+
+    const onChangeStartValue = (value: number) => {
         setStartValue(value)
         console.log(value)
     }
-    const onChangeMaxValue= (value:number)=>{
+    const onChangeMaxValue = (value: number) => {
         setMaxValue(value)
         console.log(value)
     }
@@ -27,10 +25,9 @@ export function CounterSettings(props: CounterSettingsPropsType) {
     const setSettings = () => {
         props.onChangeMaxValue(maxValue)
         props.onChangeStartValue(startValue)
-        //setValue(0)
     }
     return (
-        <div className="App">
+        <div>
             <div className='componentContainer'>
                 <div>
                     <DisplaySettingsSection

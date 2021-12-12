@@ -8,8 +8,8 @@ export type ButtonSectionPropsType = {
 }
 
 export const ButtonSettingsSection = (props: ButtonSectionPropsType) => {
+
     const setSettings = () => props.setSettings()
-    const reset = () => props.reset()
 
     return (
         <div className={s.section}>

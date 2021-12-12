@@ -4,22 +4,10 @@ import {Counter} from "./Counter/Counter";
 import {CounterSettings} from "./CounterSettings/CounterSettings";
 
 function App() {
-    /*
-        const [value, setValue] = useState(0)
-        const increment = () => {
-            setValue(value + 1)
-        }
-        const reset = () => {
-            setValue(0)
-        }*/
 
     const [startValue, setStartValue] = useState(0)
     const [maxValue, setMaxValue] = useState(1)
     const [currentValue, setCurrentValue] = useState(startValue)
-
-
-    console.log(startValue)
-    console.log(maxValue)
 
     const increment = () => {
         setCurrentValue(currentValue + 1)
@@ -49,15 +37,6 @@ function App() {
                 reset={reset}
 
             />
-
-            {/*            <div className='componentContainer'>
-                <div>
-                    <DisplaySection value={value}/>
-                </div>
-                <div>
-                    <ButtonSection increment={increment} reset={reset} value={value}/>
-                </div>
-            </div>*/}
         </div>
     );
 }

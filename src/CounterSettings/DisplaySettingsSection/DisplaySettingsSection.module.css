@@ -19,11 +19,12 @@ input{
     width: 80px;
     border-radius: 10px;
     outline: none;
+    padding-left: 10px;
+    text-align: center;
 }
 .default input{
-    padding-left: 10px;
+
 }
 .red input{
-    margin-left: 20px;
     background-color: deeppink;
 }

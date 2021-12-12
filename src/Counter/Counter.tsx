@@ -28,7 +28,7 @@ export function Counter(props: CounterPropsType) {
                                     maxValue={props.maxValue}/>
                 </div>
                 <div>
-                    <ButtonSection increment={props.increment} reset={props.reset} value={props.currentValue}/>
+                    <ButtonSection increment={props.increment} reset={props.reset} value={props.currentValue} maxValue={props.maxValue}/>
                 </div>
 
             </div>

@@ -18,10 +18,12 @@ function App() {
 
     const onChangeMaxValue = (changeMaxValue: number) => {
         setMaxValue(changeMaxValue)
+        localStorage.setItem('maxValue', JSON.stringify(changeMaxValue))
     }
     const onChangeStartValue = (changeStartValue: number) => {
         setStartValue(changeStartValue)
         setCurrentValue(changeStartValue)
+        localStorage.setItem('startValue', JSON.stringify(changeStartValue))
     }
     return (
         <div className="App">

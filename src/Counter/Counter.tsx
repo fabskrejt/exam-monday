@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Counter.css';
 import {DisplaySection} from "../DisplaySection/DisplaySection";
 import {ButtonSection} from "../ButtonSection/ButtonSection";

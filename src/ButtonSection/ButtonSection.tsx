@@ -7,6 +7,7 @@ export type ButtonSectionPropsType = {
     reset: () => void
     value: number
     maxValue:number
+    startValue:number
 }
 
 export const ButtonSection = (props: ButtonSectionPropsType) => {
@@ -16,7 +17,7 @@ export const ButtonSection = (props: ButtonSectionPropsType) => {
     return (
         <div className={s.section}>
             <Button onClick={increment} disabled={props.value === props.maxValue} title={'inc'}/>
-            <Button onClick={reset} disabled={props.value === 0} title={'reset'}/>
+            <Button onClick={reset} disabled={props.value === props.startValue} title={'reset'}/>
         </div>
     )
 }

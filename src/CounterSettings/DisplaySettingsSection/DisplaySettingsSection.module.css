@@ -1,0 +1,29 @@
+.section {
+    background-color: aquamarine;
+    border-radius: 10px;
+    color: black;
+    height: 155px;
+}
+.red {
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.default {
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+}
+input{
+    width: 80px;
+    border-radius: 10px;
+    outline: none;
+}
+.default input{
+    padding-left: 20px;
+}
+.red input{
+    margin-left: 20px;
+    background-color: deeppink;
+}

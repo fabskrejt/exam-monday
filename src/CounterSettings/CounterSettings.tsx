@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './CounterSettings.css';
 import {ButtonSettingsSection} from "./ButtonSettingsSection/ButtonSettingsSection";
 import {DisplaySettingsSection} from "./DisplaySettingsSection/DisplaySettingsSection";
@@ -12,6 +12,17 @@ export function CounterSettings(props: CounterSettingsPropsType) {
 
     const [startValue, setStartValue] = useState(0)
     const [maxValue, setMaxValue] = useState(1)
+
+    useEffect(()=>{
+        let checkMaxValue = localStorage.getItem('maxValue')
+        let checkStartValue = localStorage.getItem('startValue')
+        if (checkMaxValue && checkStartValue) {
+            let max =JSON.parse(checkMaxValue)
+            let start =JSON.parse(checkStartValue)
+            setMaxValue(max);
+            setStartValue(start);
+            setSettings()
+    }},[])
 
     const onChangeStartValue = (value: number) => {
         setStartValue(value)

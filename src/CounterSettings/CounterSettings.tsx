@@ -25,6 +25,7 @@ export function CounterSettings(props: CounterSettingsPropsType) {
     const setSettings = () => {
         props.onChangeMaxValue(maxValue)
         props.onChangeStartValue(startValue)
+
     }
     return (
         <div>
